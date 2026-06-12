@@ -16,8 +16,8 @@
         maxWorkerExecuteTime: 100
         internalBlockingPoolSize: 20
     cors:
-        origin.allowed: "https://nassphx.com,http://localhost:8081,http://localhost:8080"
-        allowCredentials: true
+        origin.allowed: "*"
+        allowCredentials: false
     webApps:
         - name: "demo"
           index: "index.html"
