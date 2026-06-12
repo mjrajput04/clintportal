@@ -1,7 +1,7 @@
     ip2loc: "US"
     proxyRemoteSsl: true
     proxyRemoteHost: "https://api.ibkr.com"
-    listenPort: 7175
+    listenPort: 5000
     listenSsl: true
     ccp: false
     svcEnvironment: "v1"
@@ -16,11 +16,15 @@
         maxWorkerExecuteTime: 100
         internalBlockingPoolSize: 20
     cors:
-        origin.allowed: "https://nassphx.com"
-        allowCredentials: true
+        origin.allowed: "*"
+        allowCredentials: false
     webApps:
         - name: "demo"
           index: "index.html"
     ips:
       allow:
-        - "*"
+        - 192.*
+        - 131.216.*
+        - 127.0.0.1
+      deny:
+        - 212.90.324.10
